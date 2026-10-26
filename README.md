@@ -2,9 +2,9 @@
 
 ```bash
 brew tap transmission-helm/tap
-brew install --cask transmission-helm
+brew install --cask --no-quarantine transmission-helm
 ```
 
-Homebrew removes the quarantine attribute on install, so the (unsigned) app opens without the right-click → Open step.
+The app is not code-signed. `--no-quarantine` lets it open directly; without it, right-click the app and choose **Open** the first time.
 
-The cask is updated from the release checksums in the main repository: https://github.com/transmission-helm/transmission-helm
+Upgrade with `brew upgrade --cask transmission-helm`. The cask is updated from the release checksums in the main repository: https://github.com/transmission-helm/transmission-helm
